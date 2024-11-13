@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height:100vh;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.container{
+    position:relative;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-40px) scale(5);
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+.foreground{
+    transform: translateY(20px) translateZ(-20px) scale(3);
+    object-fit: contain;
+    position: absolute;
+    bottom: -250px;
+    height: auto; /* Allow image to resize without stretching */
+    max-height: 100%; /* Keep within container */
+    width: auto;
+    max-width: 100%;
+    z-index: -1;
+}
+
+/* .background, .foreground{
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;
+} */
+
+h1{
+    position: absolute;
+    top:5rem;
+    font-size:10rem;
+    letter-spacing:4px;
+    color:white;
+    text-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+section{
+    /* background-color: rgba(255, 0, 0, 1); */
+    /* background: linear-gradient(90deg, rgba(244, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 100%); */
+    background: linear-gradient(90deg, rgba(238, 130, 238, 1) 11%, rgba(0, 209, 255, 1) 100%);
+    color:black;
+    padding:5rem 0;
+}
+
+.secHeading{
+    font-size:5rem;
+    padding:0 10rem;
+}
+
+.text{
+    font-size:1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position:relative;
+    width:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:contain;
+    height:500px;
+    background-repeat: no-repeat;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;   
+    padding: 0.5rem 2.5rem;
+    top:40%;
+    left:60%;
+    transform: translateX(-50%) translateX(-50%);
+    color:black;
+    font-size:3.5rem;
+    font-weight:600;
+    
+}
+
+.bg1{
+    background-image: url(ChaiImage.jpg);
+}
+
+.bg2{
+    background-image: url(CoffeeImage.jpg);
+}
+
+.bg3{
+    background-image: url(SnacksImage.jpg);
+}
+
+
