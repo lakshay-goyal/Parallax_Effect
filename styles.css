@@ -77,17 +77,18 @@ section{
     background-repeat: no-repeat;
 }
 
-.desc{
+.desc {
     position: absolute;
     background-color: white;   
     padding: 0.5rem 2.5rem;
-    top:40%;
-    left:60%;
-    transform: translateX(-50%) translateX(-50%);
-    color:black;
-    font-size:3.5rem;
-    font-weight:600;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .bg1{
@@ -103,3 +104,128 @@ section{
 }
 
 
+
+
+/* For tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 7rem;
+        top: 3rem;
+    }
+    
+    .secHeading {
+        font-size: 4rem;
+        padding: 0 5rem;
+    }
+    
+    .text {
+        font-size: 1.3rem;
+        padding: 0 5rem;
+        margin: 3rem 0;
+    }
+    
+    .desc {
+        font-size: 2.8rem;
+        padding: 0.5rem 2rem;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+        top: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .foreground {
+        transform: translateY(10px) translateZ(-20px) scale(3);
+        bottom: -150px;
+    }
+    
+    .secHeading {
+        font-size: 3rem;
+        padding: 0 2rem;
+    }
+    
+    .text {
+        font-size: 1.1rem;
+        padding: 0 2rem;
+        margin: 2rem 0;
+    }
+    
+    .bg {
+        height: 350px;
+    }
+    
+    .desc {
+            font-size: 2rem;
+            padding: 0.3rem 1.5rem;
+        }
+}
+
+/* For small mobile devices */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+        top: 1.5rem;
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .secHeading {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .text {
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .bg {
+        height: 250px;
+    }
+    
+    .desc {
+        font-size: 1.5rem;
+        padding: 0.3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    h1 {
+        font-size: 2rem;
+        top: 4rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* For ultra small devices (below 290px) */
+@media screen and (max-width: 290px) {
+    h1 {
+        font-size: 1.5rem;
+        top: 5rem;
+        letter-spacing: 1px;
+        word-wrap: break-word;
+        hyphens: auto;
+        padding: 0 0.5rem;
+    }
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+.desc.visible {
+    animation: slideIn 1s ease forwards;
+}
